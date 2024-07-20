@@ -1,10 +1,15 @@
 # Server Info API Mod for Necesse.
 
+## Description
+
 This simple mod provide http handler that's provide information about server like online, map name, TPS and other.
 
-By default, information available in /stats route, on TCP port 61111.
+By default, information available in `/stats` route, on TCP port 61111.
 
-Example response:
+<details>
+    <summary>Example response:</summary>
+
+`https://localhost:61111/stats`
 
 ```json
 {
@@ -38,3 +43,8 @@ Example response:
   }
 }
 ```
+</details>
+
+## Config
+
+You can change service port. Config can be found in `Necesse\cfg\mods\kiriharu.serverinfoapimod.cfg`.
