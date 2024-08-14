@@ -1,7 +1,6 @@
 package serverinfomod.providers;
 
 import necesse.engine.network.server.Server;
-import necesse.engine.tickManager.TickManager;
 import necesse.engine.util.GameUtils;
 import serverinfomod.data.*;
 
@@ -30,7 +29,7 @@ public class ServerDataProvider implements IDataProvider {
                 server.world.worldEntity.getTime() / 1000L
             ),
             new PerformanceData(
-                GameUtils.getTimeStringNano(server.serverThread.getTickTimeAverage()),
+                GameUtils.getTimeStringNano(server.serverThread.gameLoop.getTickTimeAverage()),
                 server.tickManager().getTPS(),
                 server.tickManager().getTotalTicks(),
                 server.tickManager().getSkippedTicks()
